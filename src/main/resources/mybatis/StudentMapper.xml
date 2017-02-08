@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.wenyu.dto.StudentMapper">
+    <resultMap id="ListWork" type="com.wenyu.domain.Student" >
+        <result column="i" property="id" />
+        <result column="na" property="name" />
+        <result column="ag" property="age" />
+        <result column="area" property="address" />
+    </resultMap>
+    <select id="findByAge" resultMap="ListWork">
+      SELECT id as i ,name as na ,age as ag,address as area from worker where age=#{age} limit #{index},#{size}
+    </select>
+</mapper>
