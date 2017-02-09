@@ -1,0 +1,42 @@
+spring:
+  redis:
+    database: 1
+    #redis服务器名称
+    host: 192.168.20.77
+    #redis服务器密码
+    password:
+    #redis服务器连接端口号
+    port: 6379
+    #redis连接池设置
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+#spring.redis.sentinel.master=
+#spring.redis.sentinel.nodes=
+    timeout: 60000
+
+
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bootsample?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: wenyu
+    driver-class-name: com.mysql.jdbc.Driver
+
+    max-active: 10
+    max-idle: 5
+    min-idle: 0
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true
+#spring.jackson.serialization.indent_output=true
+
+com:
+  wenyu:
+    pojo:
+      id: A002
+      name: Jerry
+      age: 29
+      birthDay: 2017-02-09
