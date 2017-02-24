@@ -40,3 +40,10 @@ com:
       name: Jerry
       age: 29
       birthDay: 2017-02-09
+
+mq:
+  host: 127.0.0.1
+  username: alert_user
+  password: alertme
+  port: 15672
+  vhost: /
