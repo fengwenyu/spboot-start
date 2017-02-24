@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Administrator on 2017/2/24.
  */
-@ConfigurationProperties(prefix = "mq")
 @Getter
 @Setter
 @Component
+@ConfigurationProperties(prefix = "mq")
 public class RabbitmqBean {
     private String host;
     private String username;
